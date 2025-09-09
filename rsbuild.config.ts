@@ -18,6 +18,12 @@ import * as path from "path";
 
 
 export default defineConfig({
+    output: {
+        assetPrefix: 'auto',
+        distPath: {
+            root: 'dist'
+        }
+    },
     plugins: [
         pluginVue(
             {
@@ -29,6 +35,7 @@ export default defineConfig({
         ),
         pluginModuleFederation({
             name: 'host',
+            shareStrategy: 'version-first',
             remotes: {
                 remote1: 'remote1@http://localhost:3001/mf-manifest.json',
             },

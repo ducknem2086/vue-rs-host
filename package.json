@@ -6,7 +6,7 @@
   "scripts": {
     "build": "rsbuild build",
     "dev": "rsbuild dev --open",
-    "preview": "rsbuild preview"
+    "preview": "npm run build && rsbuild preview"
   },
   "dependencies": {
     "@module-federation/bridge-vue3": "^0.18.4",

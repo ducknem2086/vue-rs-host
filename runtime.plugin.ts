@@ -7,13 +7,12 @@ export default function (): ModuleFederationRuntimePlugin {
             console.log('[build time inject] beforeInit: ', args);
             return args;
         },
-
-        beforeLoadShare(args) {
-            console.log('[build time inject] beforeoadShare: ', args);
+        onLoad(args) {
+            console.log('[build time inject] onLoad: ', args);
             return args;
         },
-        beforeBridgeRender(){
-
+        beforePreloadRemote(args) {
+            console.log('[build time inject] beforePreloadRemote: ', args);
         }
     };
 }
